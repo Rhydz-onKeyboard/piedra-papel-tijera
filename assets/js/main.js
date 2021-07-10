@@ -33,6 +33,7 @@ const rounds = () => {
             disBtns(false);
         } while (rondas === 0);
             document.getElementById("rondas").value = '';
+            document.getElementById('jugaras').innerHTML = `Jugarás ${rondas} ronda/s`;
             return (rondas);
 
     } else {
@@ -53,6 +54,7 @@ const elegi = (player) => {
     if (rondas === 0) {
         document.getElementById('rounds').disabled = false;
         disBtns(true);
+        document.getElementById('jugaras').innerHTML = '';
     }
 };
 
