@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alejandro Díaz (Rhy)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Titulo</title>
+    
+    <!-- importar bootstrap local -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- importar fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- importar iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <!-- importar estilo propio-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+<body>
+    <main class="container">
+        <section class="row row-cols-2 py-3">
+            <div class="col">
+                <h3 class="px-3">Piedra, papel o tijeras</h3>
+                <h5 class="p-3">1.- Ingresa el número de rondas</h5>
+                <div class="input-group my-3 mx-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Rondas</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Número de rondas" aria-label="rondas" aria-describedby="input-rondas" id="rondas">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-dark" type="button" id="rounds" onclick="rounds()">Aceptar</button>
+                    </div>
+                </div>
+                
+                <h5 class="p-3">2.- Elige tu jugada</h5>
+                <div class="btn-group-vertical btn-block mx-3">
+                    <button type="button" class="btn btn-success" onclick="elegi(2)">Piedra</button>
+                    <button type="button" class="btn btn-warning" onclick="elegi(0)">Papel</button>
+                    <button type="button" class="btn btn-danger" onclick="elegi(1)">Tijeras</button>
+                </div>
+
+            </div>
+
+            <div class="col p-5 box">
+                <div id="resultado">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- script para importar jquery -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- script para importar popper -->
+    <script src="./assets/js/popper.min.js"></script>
+    <!-- script para importar boostrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- script para importar main.js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

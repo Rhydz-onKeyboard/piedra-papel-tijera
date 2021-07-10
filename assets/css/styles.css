@@ -1,0 +1,21 @@
+body * {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+}
+/* Calculo para font fluida
+Ftmin   = Tamaño en pixel minimo de la fuente
+Ftmax   = Tamaño en pixel maximo de la fuente
+Vpmin   = Tamaño viewport como referencia el ANCHO(width) de pantalla/diseño minimo en pixeles
+Vpmax   = Tamaño viewport como referencia el ANCHO(width) de pantalla/diseño maximo en pixeles
+font-size: calc(Ftmin + (Ftmax - Ftmin) * ((100vw - Vpmin) / (Vpmax - Vpmin)))
+font-size: calc(35px + (82 - 35)*((100vw - 320px)/(1280-320))); */
+.box{
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
