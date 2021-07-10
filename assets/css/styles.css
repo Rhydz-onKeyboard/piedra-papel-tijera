@@ -17,5 +17,4 @@ font-size: calc(35px + (82 - 35)*((100vw - 320px)/(1280-320))); */
 .box{
     display: flex;
     align-items: center;
-    height: 50vh;
 }
