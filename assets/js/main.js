@@ -3,6 +3,10 @@
 
 const opt = () => Math.floor(Math.random()*3);
 let rondas = 0;
+const d = document;
+
+
+
 
 const validar = (arg) => {
     return !isNaN(parseFloat(arg)) && isFinite(arg);
@@ -16,7 +20,7 @@ const positivo = (n) =>{
     };
 }
 
-const btns = document.querySelectorAll('.btn-group-vertical>button');
+const btns = d.querySelectorAll('.btn-group-vertical>button');
 const disBtns = (vf) => {
     btns.forEach(e => {
         e.disabled = vf;
@@ -25,19 +29,19 @@ const disBtns = (vf) => {
 
 disBtns(true);
 const rounds = () => {
-    rondas = document.getElementById("rondas").value;
+    rondas = d.getElementById("rondas").value;
     
     if (positivo(rondas)) {
         do {
-            document.getElementById('rounds').disabled = true;
+            d.getElementById('rounds').disabled = true;
             disBtns(false);
         } while (rondas === 0);
-            document.getElementById("rondas").value = '';
-            document.getElementById('jugaras').innerHTML = `Jugarás ${rondas} ronda/s`;
+            d.getElementById("rondas").value = '';
+            d.getElementById('jugaras').innerHTML = `Jugarás ${rondas} ronda/s`;
             return (rondas);
 
     } else {
-        document.getElementById("rondas").value = ''
+        d.getElementById("rondas").value = ''
         return alert("Debes ingresar un número o el número ingresado no es valido");
     }
 }
@@ -48,13 +52,14 @@ const elegi = (player) => {
     if (0<rondas){
         let resultado = res(p, cpu);
         rondas--;
-        document.getElementById('resultado').innerHTML = ` <h5> ${resultado} </h5>`
+        d.getElementById('jugaras').innerHTML = `Jugarás ${rondas} ronda/s`;
+        d.getElementById('resultado').innerHTML = ` <h5> ${resultado} </h5>`
         // console.log(resultado)
     }
     if (rondas === 0) {
-        document.getElementById('rounds').disabled = false;
+        d.getElementById('rounds').disabled = false;
         disBtns(true);
-        document.getElementById('jugaras').innerHTML = '';
+        d.getElementById('jugaras').innerHTML = '';
     }
 };
 
